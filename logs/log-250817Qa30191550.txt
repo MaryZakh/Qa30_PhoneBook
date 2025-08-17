@@ -1,0 +1,20 @@
+19:15:53.217 INFO  manager.ApplicationManager -- All tests runs in Chrome Browser
+19:15:53.881 INFO  manager.ApplicationManager -- The link --->https://telranedu.web.app/home
+19:15:53.910 INFO  tests.TestBase -- Name of method-->loginSuccess
+19:15:58.970 INFO  tests.TestBase -- Start test with name 'loginSuccess'
+19:15:58.970 INFO  tests.TestBase -- Test data --->email: 'margo@gmail.com' & password: 'Mmar123456$'
+19:16:00.433 INFO  tests.TestBase -- Assert check is Element button 'Sign out' present
+19:16:00.438 INFO  tests.TestBase -- Name of method-->loginSuccessModel
+19:16:00.562 INFO  tests.TestBase -- Before method finished logout
+19:16:00.564 INFO  tests.TestBase -- Test data --->email: 'margo@gmail.com' & password: 'Mmar123456$'
+19:16:01.273 INFO  tests.TestBase -- Assert check is Element button 'Sign out' present
+19:16:01.275 INFO  tests.TestBase -- Name of method-->loginUnregisteredUser
+19:16:01.376 INFO  tests.TestBase -- Before method finished logout
+19:16:01.377 INFO  tests.TestBase -- Test data --->email: 'margo13@gmail.com' & password: 'Mmar123'
+19:16:02.344 INFO  tests.TestBase -- Assert check is Alert present with error text 'Wrong email or password'
+19:16:02.346 INFO  tests.TestBase -- Name of method-->loginWrongEmail
+19:16:07.374 INFO  tests.TestBase -- Test data --->email: 'margogmail.com' & password: 'Mmar123456$'
+19:16:08.467 INFO  tests.TestBase -- Assert check is Alert present with error text 'Wrong email or password'
+19:16:08.469 INFO  tests.TestBase -- Name of method-->loginWrongPassword
+19:16:13.487 INFO  tests.TestBase -- Test data --->email: 'margo@gmail.com' & password: 'Mmar123'
+19:16:14.428 INFO  tests.TestBase -- Assert check is Alert present with error text 'Wrong email or password'
