@@ -36,8 +36,8 @@ public class HelperUser extends HelperBase {
 //        passwordInput.click();
 //        passwordInput.clear();
 //        passwordInput.sendKeys(password);
-       // type(By.xpath("//input[@name='password']"), password);
-        type(By.xpath("//input[@name='pasrd']"), password);
+       type(By.xpath("//input[@name='password']"), password);
+       // type(By.xpath("//input[@name='pasrd']"), password);
 
     }
 
