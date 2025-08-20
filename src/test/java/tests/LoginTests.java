@@ -2,7 +2,13 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Objects;
 
 public class LoginTests extends TestBase {
 
@@ -15,12 +21,12 @@ public class LoginTests extends TestBase {
         }
     }
 
-    @Test
-    public void loginSuccess() {
+    @Test(dataProvider = "loginData")
+    public void loginSuccess(String email, String password) {
         logger.info("Start test with name 'loginSuccess'");
-        logger.info("Test data --->email: 'margo@gmail.com' & password: 'Mmar123456$'");
+        logger.info("Test data --->email: "+email +"& password: " +password);
        app.getHelperUser().openLoginRegistrationForm();
-       app.getHelperUser().fillLoginRegistrationForm("margo@gmail.com", "Mmar123456$");
+       app.getHelperUser().fillLoginRegistrationForm(email, password);
        app.getHelperUser().submitLogin();
 
        //Assert
@@ -31,6 +37,20 @@ public class LoginTests extends TestBase {
         Assert.assertTrue(app.getHelperUser().isLogged());
         logger.info("Assert check is Element button 'Sign out' present");
     }
+
+    @DataProvider
+    public Iterator<Object[]>loginData(){
+        List<Object[]>list = new ArrayList<>();
+        //fill collection
+        list.add(new Object[]{"margo@gmail.com","Mmar123456$"});
+        list.add(new Object[]{"sonya@gmail.com","Ss12345$"});
+        list.add(new Object[]{"margo@gmail.com","Mmar123456$"});
+        list.add(new Object[]{"sonya@gmail.com","Ss12345$"});
+        return list.iterator();
+
+    }
+
+
 
     @Test
     public void loginSuccessModel() {
