@@ -1,5 +1,6 @@
 package tests;
 
+import manager.DataProviderContact;
 import models.Contact;
 import models.User;
 import org.testng.Assert;
@@ -17,19 +18,33 @@ public class AddNewContactTests extends TestBase {
         }
     }
 
-    @Test
-    public void addContactTestAllFields() {
+    @Test(dataProvider = "contactSuccess",dataProviderClass = DataProviderContact.class)
+    public void addContactTestAllFields(Contact contact) {
         int i = new Random().nextInt(1000) + 1000;
+//
+//        Contact contact = Contact.builder()
+//                .name("Tony" + i)
+//                .lastName("Molly")
+//                .phone("343434343" + i)
+//                .email("molly" + i + "@gmail.com")
+//                .address("Haifa")
+//                .description("all fields")
+//                .build();
 
-        Contact contact = Contact.builder()
-                .name("Tony" + i)
-                .lastName("Molly")
-                .phone("343434343" + i)
-                .email("molly" + i + "@gmail.com")
-                .address("Haifa")
-                .description("all fields")
-                .build();
+        app.getHelperContact().openContactForm();
+        app.getHelperContact().fillContactForm(contact);
+        app.getHelperContact().getScreen("src/test/screeshots/screen-" +i+".png");
+        //app.getHelperContact().pause(15000);
+        app.getHelperContact().saveContact();
+        Assert.assertTrue(app.getHelperContact().isContactAddedByName(contact.getName()));
+        Assert.assertTrue(app.getHelperContact().isContactAddedByPhone(contact.getPhone()));
 
+
+    }
+
+    @Test(dataProvider = "contactCSV",dataProviderClass = DataProviderContact.class)
+    public void addContactTestAllFieldsCSV(Contact contact) {
+        int i = new Random().nextInt(1000) + 1000;
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(contact);
         app.getHelperContact().getScreen("src/test/screeshots/screen-" +i+".png");
@@ -100,16 +115,16 @@ public class AddNewContactTests extends TestBase {
     }
 
 
-    @Test
-    public void addContactTestWrongPhone() {
-        Contact contact = Contact.builder()
-                .name("Tony")
-                .lastName("Molly")
-                .phone("")
-                .email("molly@gmail.com")
-                .address("Haifa")
-                .description("wrong phone")
-                .build();
+    @Test(dataProvider = "contactWrongPhone",dataProviderClass = DataProviderContact.class)
+    public void addContactTestWrongPhone(Contact contact) {
+//        Contact contact = Contact.builder()
+//                .name("Tony")
+//                .lastName("Molly")
+//                .phone("")
+//                .email("molly@gmail.com")
+//                .address("Haifa")
+//                .description("wrong phone")
+//                .build();
 
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(contact);

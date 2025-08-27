@@ -1,5 +1,7 @@
 package tests;
 
+import manager.DataProviderUser;
+import models.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -21,7 +23,7 @@ public class LoginTests extends TestBase {
         }
     }
 
-    @Test(dataProvider = "loginData")
+    @Test(dataProvider = "loginData",dataProviderClass = DataProviderUser.class)
     public void loginSuccess(String email, String password) {
         logger.info("Start test with name 'loginSuccess'");
         logger.info("Test data --->email: "+email +"& password: " +password);
@@ -38,26 +40,27 @@ public class LoginTests extends TestBase {
         logger.info("Assert check is Element button 'Sign out' present");
     }
 
-    @DataProvider
-    public Iterator<Object[]>loginData(){
-        List<Object[]>list = new ArrayList<>();
-        //fill collection
-        list.add(new Object[]{"margo@gmail.com","Mmar123456$"});
-        list.add(new Object[]{"sonya@gmail.com","Ss12345$"});
-        list.add(new Object[]{"margo@gmail.com","Mmar123456$"});
-        list.add(new Object[]{"sonya@gmail.com","Ss12345$"});
-        return list.iterator();
+
+
+
+    @Test(dataProvider = "loginModels", dataProviderClass = DataProviderUser.class)
+    public void loginSuccessModel(User user) {
+        logger.info("Test data -->" + user.toString());
+
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm(user);
+        app.getHelperUser().submitLogin();
+        Assert.assertTrue(app.getHelperUser().isLogged());
+        logger.info("Assert check is Element button 'Sign out' present");
 
     }
 
-
-
-    @Test
-    public void loginSuccessModel() {
-        logger.info("Test data --->email: 'margo@gmail.com' & password: 'Mmar123456$'");
+    @Test(dataProvider = "loginFile", dataProviderClass = DataProviderUser.class)
+    public void loginSuccessModelDPF(User user) {
+        logger.info("Test data -->" + user.toString());
 
         app.getHelperUser().openLoginRegistrationForm();
-        app.getHelperUser().fillLoginRegistrationForm("margo@gmail.com", "Mmar123456$");
+        app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitLogin();
         Assert.assertTrue(app.getHelperUser().isLogged());
         logger.info("Assert check is Element button 'Sign out' present");

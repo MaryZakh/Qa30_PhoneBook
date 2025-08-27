@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
+import java.util.Random;
 
 public class HelperContact extends HelperBase {
     public HelperContact(WebDriver wd) {
@@ -56,10 +57,10 @@ public class HelperContact extends HelperBase {
 
     public int removeOneContact() {
         int before = countOfContacts();
-        logger.info("Number o Contacts before remove is --->"+before);
+        logger.info("Number o Contacts before remove is --->" + before);
         removeContact();
         int after = countOfContacts();
-        logger.info("Number of Contacts before remove is --->"+after);
+        logger.info("Number of Contacts before remove is --->" + after);
         return before - after;
 
 
@@ -76,17 +77,34 @@ public class HelperContact extends HelperBase {
     }
 
     public void removeAllContacts() {
-        while (wd.findElements(By.cssSelector(".contact-item_card__2SOIM")).size()!=0){
+        while (wd.findElements(By.cssSelector(".contact-item_card__2SOIM")).size() != 0) {
             removeContact();
         }
     }
 
     public void provideContacts() {
-        if(countOfContacts()<3){
+        if (countOfContacts() < 3) {
             for (int i = 0; i < 3; i++) {
-                //addOneContact();
+                addOneContact();
             }
         }
 
+    }
+
+    private void addOneContact() {
+        int i = new Random().nextInt(1000) + 1000;
+        Contact contact = Contact.builder()
+                .name("Harry")
+                .lastName("Potter")
+                .phone("55566777"+i)
+                .email("harry"+i+"@gmail.com")
+                .address("Hogwards")
+                .description("Friend")
+                .build();
+
+        openContactForm();
+        fillContactForm(contact);
+        saveContact();
+        pause(500);
     }
 }
