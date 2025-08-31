@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb5f0db1-e3f1-41b6-8b2e-fe8187a02450" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/manager/DataProviderContact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/manager/DataProviderUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/contact.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/login.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperContact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddNewContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddNewContactTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RemoveContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RemoveContactTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +75,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/build.gradle" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/manager/HelperBase.java" root0="SKIP_INSPECTION" />
   </component>
@@ -104,6 +100,7 @@
     "Gradle.AddNewContactTests.addContactTestWrongName.executor": "Run",
     "Gradle.AddNewContactTests.addContactTestWrongPhone.executor": "Run",
     "Gradle.AddNewContactTests.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
     "Gradle.LoginTests.executor": "Run",
     "Gradle.LoginTests.loginSuccess.executor": "Run",
     "Gradle.LoginTests.loginSuccessModel.executor": "Run",
