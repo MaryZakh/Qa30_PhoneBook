@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class AddNewContactTests extends TestBase {
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void preCondition() {
         if (!app.getHelperUser().isLogged()) {
             app.getHelperUser().login(new User().withEmail("margo@gmail.com").withPassword("Mmar123456$"));
@@ -56,7 +56,7 @@ public class AddNewContactTests extends TestBase {
 
     }
 
-    @Test
+    @Test(groups = {"smoke","regress","retest"})
     public void addContactTestReqFields() {
         int i = new Random().nextInt(1000) + 1000;
 

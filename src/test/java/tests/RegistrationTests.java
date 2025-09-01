@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class RegistrationTests extends TestBase {
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void preCondition(){
         //if SignOut present ---> logout
         if (app.getHelperUser().isLogged()){
@@ -14,7 +14,7 @@ public class RegistrationTests extends TestBase {
         }
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void registrationSuccess(){
         int i = (int) ((System.currentTimeMillis()/1000)%3600);
         User user = new User().withEmail("margo"+i+"@gmail.com").withPassword("Mmar123456$");
