@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fb5f0db1-e3f1-41b6-8b2e-fe8187a02450" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddNewContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddNewContactTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RemoveContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RemoveContactTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,38 +86,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Gradle.AddNewContactTests.addContactTestAllFields.executor": "Run",
-    "Gradle.AddNewContactTests.addContactTestAllFieldsCSV.executor": "Run",
-    "Gradle.AddNewContactTests.addContactTestWrongEmail.executor": "Run",
-    "Gradle.AddNewContactTests.addContactTestWrongLastName.executor": "Run",
-    "Gradle.AddNewContactTests.addContactTestWrongName.executor": "Run",
-    "Gradle.AddNewContactTests.addContactTestWrongPhone.executor": "Run",
-    "Gradle.AddNewContactTests.executor": "Run",
-    "Gradle.Download Sources.executor": "Run",
-    "Gradle.LoginTests.executor": "Run",
-    "Gradle.LoginTests.loginSuccess.executor": "Run",
-    "Gradle.LoginTests.loginSuccessModel.executor": "Run",
-    "Gradle.LoginTests.loginSuccessModelDPF.executor": "Run",
-    "Gradle.LoginTests.loginUnregisteredUser.executor": "Run",
-    "Gradle.LoginTests.loginWrongEmail.executor": "Run",
-    "Gradle.LoginTests.loginWrongPassword.executor": "Run",
-    "Gradle.LoginTests.test.executor": "Run",
-    "Gradle.RegistrationTests.executor": "Run",
-    "Gradle.RegistrationTests.registrationExistsUser.executor": "Run",
-    "Gradle.RegistrationTests.registrationSuccess.executor": "Run",
-    "Gradle.RegistrationTests.registrationWrongEmail.executor": "Run",
-    "Gradle.RegistrationTests.registrationWrongPassword.executor": "Run",
-    "Gradle.RemoveContactTests.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/marii/Downloads/Qa30_PhoneBook",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.AddNewContactTests.addContactTestAllFields.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AddNewContactTests.addContactTestAllFieldsCSV.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AddNewContactTests.addContactTestWrongEmail.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AddNewContactTests.addContactTestWrongLastName.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AddNewContactTests.addContactTestWrongName.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AddNewContactTests.addContactTestWrongPhone.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AddNewContactTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginTests.loginSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginTests.loginSuccessModel.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginTests.loginSuccessModelDPF.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginTests.loginUnregisteredUser.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginTests.loginWrongEmail.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginTests.loginWrongPassword.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginTests.test.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RegistrationTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RegistrationTests.registrationExistsUser.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RegistrationTests.registrationSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RegistrationTests.registrationWrongEmail.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RegistrationTests.registrationWrongPassword.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RemoveContactTests.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/marii/Downloads/Qa30_PhoneBook&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Qa30\Qa30_PhoneBook\src\main\resources" />

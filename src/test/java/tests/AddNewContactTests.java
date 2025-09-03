@@ -55,6 +55,7 @@ public class AddNewContactTests extends TestBase {
 
 
     }
+    //for Jenkins
 
     @Test(groups = {"smoke","regress","retest"})
     public void addContactTestReqFields() {
